@@ -2,8 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Anims
+{
+    public AnimationClip idle;
+    public AnimationClip runForward;
+    public AnimationClip runBackward;
+    public AnimationClip runLeft;
+    public AniamtionClip runRight;
+}
+
+
 public class PlayerCtrl : MonoBehaviour
 {
+
+    public Anims anims;
     public float speed = 6.0f;
 
     private Animation anim;
