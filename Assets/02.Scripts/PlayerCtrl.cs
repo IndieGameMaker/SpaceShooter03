@@ -9,7 +9,8 @@ public class Anims
     public AnimationClip runForward;
     public AnimationClip runBackward;
     public AnimationClip runLeft;
-    public AniamtionClip runRight;
+    public AnimationClip runRight;
+    public AnimationClip[] dies;
 }
 
 
@@ -25,7 +26,8 @@ public class PlayerCtrl : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animation>();
-        anim.Play("Idle");
+        //anim.Play("Idle");
+        anim.Play(anims.idle.name);
     }
 
     // Update is called once per frame
@@ -56,6 +58,27 @@ public class PlayerCtrl : MonoBehaviour
         Vector3.zero    = Vector3(0, 0, 0)
         */
 
+
+        if (v >= 0.1f) //전진 애니메이션
+        {
+            anim.CrossFade(anims.runForward.name, 0.3f);
+        }
+        else if (v <= -0.1f) //후진 애니메이션
+        {
+            anim.CrossFade(anims.runBackward.name, 0.3f);
+        }
+        else if (h >= 0.1f) //오른쪽 이동
+        {
+            anim.CrossFade(anims.runRight.name, 0.3f);
+        }
+        else if (h <= -0.1f) //왼쪽 이동
+        {
+            anim.CrossFade(anims.runLeft.name, 0.3f);
+        }
+        else
+        {
+            anim.CrossFade(anims.idle.name, 0.3f);
+        }
     }
 
 
