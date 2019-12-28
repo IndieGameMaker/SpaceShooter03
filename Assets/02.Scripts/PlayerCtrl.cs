@@ -6,10 +6,13 @@ public class PlayerCtrl : MonoBehaviour
 {
     public float speed = 6.0f;
 
+    private Animation anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animation>();
+        anim.Play("Idle");
     }
 
     // Update is called once per frame
