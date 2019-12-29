@@ -21,9 +21,21 @@ public class FollowCam : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        //카메라의 위치값을 계산
+        Vector3 camPos = targetTr.position - (targetTr.forward * distance) + (targetTr.up * height);
+
+        //부드러운 이동
+        transform.position = Vector3.Lerp(transform.position
+                                        , camPos
+                                        , Time.deltaTime * moveSpeed);
+
+        //부드러운 회전
+        transform.rotation = Quaternion.Slerp(transform.rotation
+                                            , targetTr.rotation
+                                            , Time.deltaTime * rotateSpeed);
+        //카메라 회전
+        transform.LookAt(targetTr.position);
     }
 }
