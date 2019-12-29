@@ -11,7 +11,6 @@ public class FollowCam : MonoBehaviour
     
     [Range(3.0f, 7.0f)]
     public float distance = 5.0f;
-    [Range(3.0f, 10.0f)]
     public float height   = 5.0f;
 
 
