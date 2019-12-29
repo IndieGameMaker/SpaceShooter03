@@ -632,6 +632,21 @@ MonoBehaviour:
     - {fileID: 7400000, guid: 51cbd067cae9045c5a2c142eef61629a, type: 2}
     - {fileID: 7400000, guid: a0dafc451f9464183be55cce26c50cc6, type: 2}
   speed: 6
+--- !u!114 &1450768996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450768994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34030bede36d7452ba117233b02813d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2412066949806877486, guid: a2f2af0f026564e658587636a9de4278,
+    type: 3}
+  firePos: {fileID: 213534040}
 --- !u!4 &1450768997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400046, guid: f3cd25b3bf53c4adaaf087d862e435e6,

@@ -14,6 +14,9 @@ public class FireCtrl : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        }
     }
 }
